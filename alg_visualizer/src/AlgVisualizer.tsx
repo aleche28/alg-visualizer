@@ -60,7 +60,7 @@ function AlgVisualizer() {
     switch (action) {
       case Action.CHOOSE_SOURCE:
         if (element.classList.contains("obstacle")) {
-          setObstacleIds(obstacleIds.filter((obstacleId) => obstacleId !== id));
+          setObstacleIds(obstacleIds.filter((obstacleId: string) => obstacleId !== id));
         }
         if (element.classList.contains("target")) {
           break;
@@ -87,7 +87,7 @@ function AlgVisualizer() {
         break;
       case Action.CHOOSE_TARGET:
         if (element.classList.contains("obstacle")) {
-          setObstacleIds(obstacleIds.filter((obstacleId) => obstacleId !== id));
+          setObstacleIds(obstacleIds.filter((obstacleId: string) => obstacleId !== id));
         }
         if (element.classList.contains("source")) {
           break;
@@ -124,7 +124,7 @@ function AlgVisualizer() {
             setCellClass(id, "free");
             if (obstacleIds.includes(id)) {
               setObstacleIds(
-                obstacleIds.filter((obstacleId) => obstacleId !== id)
+                obstacleIds.filter((obstacleId: string) => obstacleId !== id)
               );
             }
           } else {
